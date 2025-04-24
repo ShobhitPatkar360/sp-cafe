@@ -1,0 +1,53 @@
+settin endpoint
+https://your-api-gateway-endpoint.amazonaws.com/contact
+
+-------------------WORKING DOCKERFILE AT PRODUCTION ENV
+
+# Step 1: Build the app
+FROM node:18-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy the rest of the code
+COPY . .
+
+# Build the app
+RUN npm run build
+
+# Step 2: Serve the build
+FROM node:18-alpine
+
+# Install a static file server
+RUN npm install -g serve
+
+# Copy built files from builder stage
+COPY --from=builder /app/dist /app/dist
+
+# Set working directory
+WORKDIR /app
+
+# Serve the app
+EXPOSE 4173
+CMD ["serve", "-s", "dist", "-l", "4173"]
+
+
+---------------------------CONTAINER MGMT COMMANDS
+
+building image
+docker build -t website .
+
+
+running CONTAINER (interactive)
+docker run -it -v /application/project:/app --name website_container --network host website sh
+
+stopping container
+docker stop website_container
+docker rm website_container
+
+deleting image
+docker rmi website
