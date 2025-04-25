@@ -18,7 +18,7 @@ interface ContactFormData {
 export const sendContactForm = async (formData: ContactFormData): Promise<any> => {
   try {
     // Replace this URL with your actual AWS API Gateway endpoint
-    const apiEndpoint = 'https://google.com';
+    const apiEndpoint = '__aws_api_gateway_invoke_url/__resource';
     
     const response = await fetch(apiEndpoint, {
       method: 'POST',

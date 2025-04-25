@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
     
     try {
       // Replace with your actual AWS API Gateway endpoint
-      const response = await fetch('https://google.com', {
+      const response = await fetch('__aws_api_gateway_invoke_url/__resource', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
