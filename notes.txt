@@ -1,4 +1,8 @@
 
+-------------------THINGS NEEDED TO CHANGE
+
+1. Put proper api gateway invoke url at files "src/lib/api.ts" and "src/pages/Contac.tsx"
+2. Put same email id in lambda function for sender and reciever
 
 -------------------WORKING DOCKERFILE AT PRODUCTION ENV
 
