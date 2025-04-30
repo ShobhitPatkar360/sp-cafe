@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white py-4'
       }`}
     >
       <div className="container-custom">
@@ -35,9 +35,9 @@ const Header: React.FC = () => {
           <NavLink to="/" className="flex items-center gap-2">
             <Coffee 
               size={24} 
-              className={`transition-colors ${isScrolled ? 'text-primary-700' : 'text-primary-600'}`} 
+              className={`transition-colors ${isScrolled ? 'text-primary-700' : 'text-neutral-500'}`} 
             />
-            <span className="font-serif text-xl font-semibold text-primary-800">Shobhit Cafe</span>
+            <span className={`font-serif text-xl font-semibold transition-colors ${isScrolled ? 'text-primary-800' : 'text-neutral-500'}`}> Shobhit Cafe</span>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                   to="/" 
                   className={({ isActive }) => 
                     `text-base font-medium hover:text-primary-700 transition-colors ${
-                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-gray-800'
+                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-neutral-500'
                     }`
                   }
                 >
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                   to="/about" 
                   className={({ isActive }) => 
                     `text-base font-medium hover:text-primary-700 transition-colors ${
-                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-gray-800'
+                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-neutral-500'
                     }`
                   }
                 >
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                   to="/contact" 
                   className={({ isActive }) => 
                     `text-base font-medium hover:text-primary-700 transition-colors ${
-                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-gray-800'
+                      isActive ? 'text-primary-700' : isScrolled ? 'text-gray-800' : 'text-neutral-500'
                     }`
                   }
                 >
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
             {isMenuOpen ? (
               <X size={24} className="text-primary-700" />
             ) : (
-              <Menu size={24} className={isScrolled ? 'text-primary-700' : 'text-primary-700'} />
+              <Menu size={24} className={isScrolled ? 'text-primary-700' : 'text-neutral-500'} />
             )}
           </button>
         </div>

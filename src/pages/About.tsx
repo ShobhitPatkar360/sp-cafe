@@ -41,13 +41,13 @@ const About: React.FC = () => {
             >
               <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">The Beginning</h2>
               <p className="text-gray-700 mb-4">
-                Artisan Brews began in 2015 as a small coffee cart at the local farmers market. Founder Elena Martinez, a third-generation coffee farmer's daughter, wanted to share the art of specialty coffee with her community.
+              Shobhit Cafe began in 2025 as a small coffee cart at the local farmers market. Founder Shobhit Patkar, a devops engineer, posses interest in making coffee and wanted to share the art of specialty coffee with his community.
               </p>
               <p className="text-gray-700 mb-4">
-                What started as a weekend hobby quickly gained a devoted following. People would line up before the market opened just to get a cup of Elena's carefully crafted coffee.
+                What started as a weekend hobby quickly gained a devoted following. People would line up before the market opened just to get a cup of Shobhit's carefully crafted coffee.
               </p>
               <p className="text-gray-700">
-                Two years later, with the support of loyal customers and like-minded coffee enthusiasts, Artisan Brews opened its first brick-and-mortar location in the heart of Bean City.
+                Two years later, with the support of loyal customers and like-minded coffee enthusiasts, Shobhit Cafe opened its first brick-and-mortar location in the heart of Bean City.
               </p>
             </motion.div>
             <motion.div
@@ -73,7 +73,7 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Our Values</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do at Artisan Brews.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do at Shobhit Cafe.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -157,7 +157,7 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Meet Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">The passionate individuals who bring Artisan Brews to life every day.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">The passionate individuals who bring Shobhit Cafe to life every day.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,15 +170,15 @@ const About: React.FC = () => {
             >
               <div className="mb-4 rounded-full overflow-hidden h-48 w-48 mx-auto">
                 <img 
-                  src="https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                  src="./assests/image1.jpg" 
                   alt="Elena Martinez" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-serif font-medium">Elena Martinez</h3>
+              <h3 className="text-xl font-serif font-medium">Shobhit Patkar</h3>
               <p className="text-primary-700 mb-2">Founder & Head Roaster</p>
-              <p className="text-gray-600 text-sm">Third-generation coffee farmer with a passion for bringing out the unique characteristics of each bean.</p>
+              <p className="text-gray-600 text-sm">DevOps Engineer, also passonate for making coffee. Showcase his art of tast, mostly liked by peoples</p>
             </motion.div>
 
             <motion.div 
@@ -190,7 +190,7 @@ const About: React.FC = () => {
             >
               <div className="mb-4 rounded-full overflow-hidden h-48 w-48 mx-auto">
                 <img 
-                  src="https://images.pexels.com/photos/8108063/pexels-photo-8108063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                  src="https://img.taste.com.au/uzAdjFId/w720-h480-cfill-q80/taste/2018/01/sweet-n-sour-chicken-135158-1.jpg" 
                   alt="James Wilson" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -210,7 +210,7 @@ const About: React.FC = () => {
             >
               <div className="mb-4 rounded-full overflow-hidden h-48 w-48 mx-auto">
                 <img 
-                  src="https://images.pexels.com/photos/3771118/pexels-photo-3771118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGtsyAT1MLLEaW9TcUNYiv77klPtnlxCw-QQ&s" 
                   alt="Sophie Chen" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -230,7 +230,7 @@ const About: React.FC = () => {
             >
               <div className="mb-4 rounded-full overflow-hidden h-48 w-48 mx-auto">
                 <img 
-                  src="https://images.pexels.com/photos/8108150/pexels-photo-8108150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                  src="https://www.shutterstock.com/image-photo/cham-mithai-called-rasgulla-malai-260nw-2126628878.jpg" 
                   alt="Marcus Johnson" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -258,7 +258,7 @@ const About: React.FC = () => {
               Come Be Part of Our Story
             </h2>
             <p className="text-lg opacity-90 mb-8">
-              We'd love to welcome you to Artisan Brews and share our passion for exceptional coffee and community.
+              We'd love to welcome you to Shobhit Cafe and share our passion for exceptional coffee and community.
             </p>
             <button className="btn btn-accent">
               Visit Us Today

@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Coffee, Instagram, Facebook, Twitter } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const text-neutral-500: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-900 text-white">
+    <text-neutral-500 className="bg-primary-900 text-white">
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Logo and Description */}
@@ -90,8 +90,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </text-neutral-500>
   );
 };
 
-export default Footer;
+export default text-neutral-500;

@@ -1,4 +1,4 @@
-# Artisan Brews Cafe Website
+# Shobhit Cafe
 
 A beautifully designed website for a fictional artisan coffee shop built with React, TypeScript, Tailwind CSS, and Framer Motion.
 

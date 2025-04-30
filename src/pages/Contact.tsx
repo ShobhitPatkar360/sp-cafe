@@ -104,9 +104,9 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-serif font-medium mb-2">Our Location</h3>
                     <address className="not-italic text-gray-600">
-                      123 Coffee Street<br />
-                      Bean City, BC 12345<br />
-                      United States
+                      Dharmapuri, Forest Colony<br />
+                      Tajganj, Agra<br />
+                      Uttar Pradesh
                     </address>
                   </div>
                 </div>
@@ -120,8 +120,8 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-serif font-medium mb-2">Email Us</h3>
                     <p className="text-gray-600">
-                      General Inquiries: <a href="mailto:hello@artisanbrews.com" className="text-primary-700 hover:underline">hello@artisanbrews.com</a><br />
-                      Careers: <a href="mailto:jobs@artisanbrews.com" className="text-primary-700 hover:underline">jobs@artisanbrews.com</a>
+                      General Inquiries: <a href="mailto:hello@artisanbrews.com" className="text-primary-700 hover:underline">shobhitpatkar2000@outlook.com</a><br />
+                      Careers: <a href="mailto:jobs@artisanbrews.com" className="text-primary-700 hover:underline">jobs@some.domain.com</a>
                     </p>
                   </div>
                 </div>
@@ -279,14 +279,14 @@ const Contact: React.FC = () => {
           <h2 className="text-3xl font-serif font-medium mb-8 text-center">Find Us</h2>
           <div className="h-[400px] w-full rounded-lg overflow-hidden shadow-md">
             {/* Replace with actual map embedding - for now showing a placeholder */}
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin size={48} className="text-primary-700 mx-auto mb-4" />
-                <p className="text-gray-600">
-                  Interactive map placeholder - 123 Coffee Street, Bean City, BC 12345
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4005540576463!2d78.03956727544868!3d27.17514477649168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1745990701813!5m2!1sen!2sin"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

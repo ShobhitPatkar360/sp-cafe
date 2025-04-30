@@ -1,0 +1,90 @@
+import json
+import boto3
+import os
+from botocore.exceptions import ClientError
+
+# Environment variables (set in Lambda config)
+DYNAMODB_TABLE = "UsedIPs"
+SES_SENDER_EMAIL = "something-verified-2000@gmail.com"
+SES_RECIPIENT_EMAIL = "something-where-to-send-2000@gmail.com"
+
+dynamodb = boto3.resource("dynamodb")
+table = dynamodb.Table(DYNAMODB_TABLE)
+ses = boto3.client("ses")
+
+def lambda_handler(event, context):
+    try:
+        # Extract client IP address
+        ip = event["requestContext"]["identity"]["sourceIp"]
+        
+        # Check if IP already exists in DynamoDB
+        response = table.get_item(Key={"ip": ip})
+        if "Item" in response:
+            return {
+                "statusCode": 429,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "POST",
+                    "Access-Control-Allow-Headers": "Content-Type"
+                },
+                "body": json.dumps({"message": "Only one submission allowed from your side"})
+            }
+
+
+        # Parse incoming request body
+        body = json.loads(event["body"])
+        name = body.get("name")
+        email = body.get("email")
+        subject = body.get("subject")
+        message = body.get("message")
+
+        if not all([name, email, subject, message]):
+            return {
+                "statusCode": 400,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "POST",
+                    "Access-Control-Allow-Headers": "Content-Type"
+                },
+                "body": json.dumps({"message": "Missing required fields."})
+            }
+
+        # Send email via SES
+        body_text = f"Name: {name}\nEmail: {email}\nSubject: {subject}\nMessage: {message}"
+        subject = f"Website User - {subject}"
+        ses.send_email(
+            Source=SES_SENDER_EMAIL,
+            Destination={"ToAddresses": [SES_RECIPIENT_EMAIL]},
+            Message={
+                "Subject": {"Data": subject},
+                "Body": {"Text": {"Data": body_text}}
+            }
+        )
+
+        # Log the IP in DynamoDB
+        table.put_item(Item={"ip": ip})
+
+        return {
+            "statusCode": 200,
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST",
+                "Access-Control-Allow-Headers": "Content-Type"
+            },
+            "body": json.dumps({"message": "Email sent successfully."})
+        }
+
+    except ClientError as e:
+        print(f"ClientError: {e}")
+        return {
+            "statusCode": 500,
+            "body": json.dumps({"message": "Internal server error."})
+        }
+
+    except Exception as ex:
+        print(f"Unhandled error: {ex}")
+        return {
+            "statusCode": 500,
+            "body": json.dumps({"message": "Unhandled exception occurred."})
+        }
+

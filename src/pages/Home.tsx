@@ -29,7 +29,7 @@ const Home: React.FC = () => {
               Crafting Perfect Moments, One Cup at a Time
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              Welcome to Shobhit Cafe, where happiest moments becomes a memory.
+              Welcome to Shobhit Cafe, where happiest moments become memories.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/about" className="btn btn-accent">
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">What Makes Us Special</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Discover the artistry and passion that goes into everything we serve at Artisan Brews.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">You will discover innovative ways to make your celebration more special.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Experience Our Atmosphere</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Step into our cozy space and experience the warmth of Artisan Brews.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Step into our cozy space and experience the warmth of Shobhit Cafe.</p>
           </div>
           
           <Gallery />
